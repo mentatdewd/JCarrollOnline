@@ -8,10 +8,21 @@
         <%= render 'shared/micropost_form' %>
       </section>
     </aside>
-    <div class="span8">
-      <h3>Micropost Feed</h3>
+    <div class="span4">
+      <h3>Posts</h3>
       <%= render 'shared/feed' %>
     </div>
+    <aside class="span4">
+      <section>
+        <h3>Extreme Tech RSS</h3>
+        <ul>
+          <% RssfeedEntry.update_from_feed("http://www.extremetech.com/feed") %>
+          <% for entry in RssfeedEntry.all(:limit => 10, :order => "published_at desc") %>
+            <li><%= link_to h(entry.name), entry.url %></li>
+          <%end%>
+        </ul>
+      </section>
+    </aside>
   </div>
 <% else %>
 	<div class="center hero-unit">
