@@ -7,5 +7,9 @@ class RSSFeedEntryController < ApplicationController
 
   def destroy
   end
+
+  def show
+  end
+  
   private
 end
