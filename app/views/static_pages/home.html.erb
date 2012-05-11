@@ -13,15 +13,7 @@
       <%= render 'shared/feed' %>
     </div>
     <aside class="span4">
-      <section>
-        <img src='/assets/feed-icon-28x28.png' align='left'/>
-        <h4>Extreme Tech RSS</h4>
-        <ul>
-          <% for entry in RssfeedEntry.all(:limit => 10, :order => "published_at desc") %>
-            <li><%= link_to h(entry.name), entry.url %></li>
-          <%end%>
-        </ul>
-      </section>
+      <%= render partial: 'shared/rssfeedentry' %>
     </aside>
   </div>
 <% else %>
