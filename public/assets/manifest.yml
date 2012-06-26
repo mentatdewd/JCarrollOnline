@@ -7,9 +7,12 @@ dock-bg.gif: dock-bg.gif
 dock-bg2.gif: dock-bg2.gif
 email.png: email.png
 feed-icon-28x28.png: feed-icon-28x28.png
+help.png: help.png
 history.png: history.png
 home.png: home.png
+information_128.png: information_128.png
 link.png: link.png
+logo_128.png: logo_128.png
 logout_256.png: logout_256.png
 main-bg.gif: main-bg.gif
 music.png: music.png
@@ -26,6 +29,8 @@ user.png: user.png
 video.png: video.png
 application.js: application.js
 application.css: application.css
+glyphicons-halflings-white.png: glyphicons-halflings-white.png
+glyphicons-halflings.png: glyphicons-halflings.png
 jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png: jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png
 jquery-ui/ui-bg_flat_75_ffffff_40x100.png: jquery-ui/ui-bg_flat_75_ffffff_40x100.png
 jquery-ui/ui-bg_glass_55_fbf9ee_1x400.png: jquery-ui/ui-bg_glass_55_fbf9ee_1x400.png
