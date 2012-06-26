@@ -20,6 +20,7 @@ class ForumThreadsController < ApplicationController
   # GET /forum_threads/1
   # GET /forum_threads/1.json
   def show
+    @forum_thread = ForumThread.find(params[:id])
     impressionist(@forum_thread) #message is optional
 
     @user = current_user
@@ -70,11 +71,12 @@ class ForumThreadsController < ApplicationController
   # PUT /forum_threads/1
   # PUT /forum_threads/1.json
   def update
-    #@forum_thread = ForumThread.find(params[:id])
+    @forum_thread = ForumThread.find(params[:id])
+    @forum_threads = @forum_thread.subtree
 
     respond_to do |format|
-      if @current_forum_thread.update_attributes(params[:forum_thread])
-        format.html { redirect_to @forum_thread, notice: 'Forum thread was successfully updated.' }
+      if @forum_thread.update_attributes(params[:forum_thread])
+        format.html { redirect_to forum_threads_path(:id => @forum_thread.root.id, :parent_id => @forum_thread.root.id), notice: 'Forum thread was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
