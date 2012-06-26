@@ -1,0 +1,52 @@
+<h1> <%= @forum.forum_title %> </h1>
+
+<p>
+  <b><%= @forum.description %></b>
+</p>
+
+<hr>
+
+<% if @forum_threads.any? %>
+    <table cellpadding="10px">
+      <tr>
+        <th>Title</th>
+        <th>Replies</th>
+        <th>Author</th>
+        <th>Start time</th>
+        <th>Last reply</th>
+        <th>Recs</th>
+        <th>Views</th>
+      </tr>
+
+      <% @forum_threads.each do |forum_thread| %>
+          <% if forum_thread.parent.nil? %>
+              <tr>
+                <td><%= link_to forum_thread.forum_thread_title, forum_threads_path(:id => forum_thread.id) %></td>
+                <% if forum_thread.any_replies? %>
+                    <td><%= forum_thread.thread_count(forum_thread) %></td>
+                <% else %>
+                    <td><%= "0" %></td>
+                <% end %>
+                <td><%= link_to get_author(forum_thread.author_id).name, user_path(forum_thread.author_id) %></td>
+                <td><%= forum_thread.created_at.strftime("%r %B %d, %Y") %></td>
+                <% if forum_thread.any_replies? %>
+                    <td><%= forum_thread.get_last_reply(forum_thread).created_at.strftime("%r %B %d, %Y") %></td>
+                <% else %>
+                    <td><%= "" %></td>
+                <% end %>
+                <td><%= forum_thread.get_recs %></td>
+                <td><%= forum_thread.get_views(forum_thread) %></td>
+              </tr>
+          <% end %>
+      <% end %>
+    </table>
+<% end %>
+
+<hr>
+
+<% if signed_in? %>
+    <%= link_to "New thread", new_forum_thread_path(:forum_id => @forum.id), class: "btn btn-large btn-primary" %>
+
+    <%= link_to 'Edit', edit_forum_path(@forum) %> |
+<% end %>
+<%= link_to 'Back', forums_path %>

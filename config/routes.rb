@@ -1,4 +1,7 @@
 JCarrollOnline::Application.routes.draw do
+  resources :forum_threads
+  resources :forums
+
   resources :users do
     member do
       get :following, :followers

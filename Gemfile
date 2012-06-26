@@ -1,15 +1,21 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
-gem 'bootstrap-sass', '2.0.0'
 gem 'pg', '0.12.2'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
-gem 'bootstrap-will_paginate', '0.0.5'
 gem 'feedzirra'
 gem 'gravtastic'
-#gem 'readline'
+gem 'ancestry'
+gem 'table_for_collection'
+gem 'impressionist'
+gem 'breadcrumbs_on_rails'
+gem 'ruby-prof'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'bootstrap-sass'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -31,8 +37,6 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
 
 group :test do
   gem 'rspec-rails', '2.9.0'

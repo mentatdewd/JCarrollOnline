@@ -1,0 +1,32 @@
+<%= form_for(@forum_thread) do |f| %>
+    <% if @forum_thread.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@forum_thread.errors.count, "error") %> prohibited this forum_thread from being saved:</h2>
+
+          <ul>
+            <% @forum_thread.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :forum_thread_title %>
+      <br/>
+      <%= f.text_field :forum_thread_title %>
+    </div>
+    <div class="field">
+      <%= f.label :forum_thread_content %>
+      <br/>
+      <%= f.text_area :forum_thread_content %>
+    </div>
+
+    <%= f.hidden_field :forum_id %>
+    <%= f.hidden_field :author_id %>
+    <%= f.hidden_field :parent_id %>
+
+    <div class="actions">
+      <%= f.submit :class => "btn btn-large btn-primary"%>
+    </div>
+<% end %>

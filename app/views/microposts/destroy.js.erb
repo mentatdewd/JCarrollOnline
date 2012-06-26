@@ -1,0 +1,4 @@
+$("#flash_notice").html('<%= escape_javascript(flash.discard(:success))%>');
+$("#user_info").html("<%= pluralize(current_user.microposts.count, "micropost") %>");
+$('li#micropost-<%= @micropost.id %>').remove();
+$("#micropost_form")[0].reset();

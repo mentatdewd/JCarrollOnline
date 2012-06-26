@@ -1,31 +1,85 @@
-<header class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "JCarrollOnline", root_path, id: "logo" %>
-      <nav>
-        <ul class="nav pull-right">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Help", help_path %></li>
-          <% if signed_in? %>
-            <li><%= link_to "Users", users_path %></li>
-            <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Account <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-                <li class="divider"></li>
-                <li>
-                  <%= link_to "Sign out", signout_path, method: "delete" %>
-                </li>
-              </ul>
-            </li>
-          <% else %>
-            <li><%= link_to "Sign in", signin_path %></li>
-          <% end %>
-        </ul>
-      </nav>
-    </div>
+<header>
+  <title>CSS Dock Menu</title>
+  <script src="/assets/jquery.js"></script>
+  <script src="/assets/interface.js"></script>
+
+  <link href="/assets/style.css" rel="stylesheet" />
+
+  <!--[if lt IE 7]>
+  <style type="text/css">
+      .dock img {
+          behavior: url(iepngfix.htc)
+      }
+  </style>
+  <![endif]-->
+
+<!--top dock -->
+<div class="dock" id="dock">
+  <div class="dock-container">
+    <%= link_to root_path, :class => 'dock-item' do %>
+        <%= image_tag("home.png") %>
+        <%= content_tag(:span, 'Home') %>
+    <% end %>
+    <%= link_to users_path, :class => 'dock-item' do %>
+        <%= image_tag("user.png") %>
+        <%= content_tag(:span, 'Users') %>
+    <% end %>
+    <%= link_to forums_path, :class => 'dock-item' do %>
+        <%= image_tag("portfolio.png") %>
+        <%= content_tag(:span, 'Forums') %>
+    <% end %>
+    <%= link_to current_user, :class => 'dock-item' do %>
+        <%= image_tag("profile.png") %>
+        <%= content_tag(:span, 'Profile') %>
+    <% end %>
+    <% if (signed_in?) %>
+        <%= link_to signout_path, :class => 'dock-item', :method => 'delete' do %>
+            <%= image_tag("signout.png") %>
+            <%= content_tag(:span, 'Sign out!') %>
+        <% end %>
+    <% else %>
+        <%= link_to signin_path, :class => 'dock-item' do %>
+            <%= image_tag("sign_in.png") %>
+            <%= content_tag(:span, 'Sign in!') %>
+        <% end %>
+        <%= link_to signup_path, :class => 'dock-item' do %>
+            <%= image_tag("signup_icon.png") %>
+            <%= content_tag(:span, 'Sign up!') %>
+        <% end %>
+    <% end %>
+    <%= link_to help_path, :class => 'dock-item' do %>
+        <%= image_tag("history.png") %>
+        <%= content_tag(:span, 'Help') %>
+    <% end %>
+    <%= link_to about_path, :class => 'dock-item' do %>
+        <%= image_tag("calendar.png") %>
+        <%= content_tag(:span, 'About') %>
+    <% end %>
+    <%= link_to contact_path, :class => 'dock-item' do %>
+        <%= image_tag("calendar.png") %>
+        <%= content_tag(:span, 'Contact') %>
+    <% end %>
   </div>
+</div>
+
+<!--dock menu JS options -->
+<script type="text/javascript">
+
+    $(document).ready(
+            function () {
+                $('#dock').Fisheye(
+                        {
+                            maxWidth:50,
+                            items:'a',
+                            itemsText:'span',
+                            container:'.dock-container',
+                            itemWidth:40,
+                            proximity:90,
+                            halign:'center'
+                        }
+                )
+            }
+    );
+
+</script>
 </header>

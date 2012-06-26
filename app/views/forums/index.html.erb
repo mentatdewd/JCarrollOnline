@@ -1,0 +1,32 @@
+<h1>Forums</h1>
+
+<%= will_paginate %>
+
+<table cellpadding="10px">
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Thread Count</th>
+    <th>Last Thread</th>
+  </tr>
+
+  <% @forums.each do |forum| %>
+      <tr>
+        <td><%= link_to forum.forum_title, forum %></td>
+        <td><%= forum.description %></td>
+        <td><%= forum.thread_count(forum.id) %></td>
+        <% if forum.thread_count(forum.id)!=0 %>
+            <td><%= forum.last_thread(forum.id).created_at %></td>
+        <% else %>
+            <td><%= "none" %></td>
+        <% end %>
+      </tr>
+  <% end %>
+</table>
+
+<br/>
+<% if signed_in? %>
+    <% if current_user.admin? %>
+        <%= link_to "New forum", new_forum_path, class: "btn btn-large btn-primary" %>
+    <% end %>
+<% end %>

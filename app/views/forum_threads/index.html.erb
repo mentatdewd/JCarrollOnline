@@ -1,0 +1,4 @@
+<h1><%= get_forum_title(@forum_thread) %></h1>
+
+<%=  nested_threads @forum_threads.arrange(:order => :created_at) %>
+

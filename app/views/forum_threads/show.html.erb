@@ -1,0 +1,28 @@
+<section>
+  <div class="span3">
+    <h1>
+      <%= gravatar_for @user %>
+      <%= @user.name %>
+    </h1>
+  </div>
+</section>
+
+<p>
+  <b><%= @forum_thread.forum_thread_title %></b>
+</p>
+
+<%= render 'layouts/thread_post_header' %>
+
+<p>
+  <%= link_to get_author(@forum_thread.author_id).name, user_path(@forum_thread.author_id) %>
+</p>
+
+<hr>
+
+<% if @forum_thread.any_replies %>
+<%=  nested_threads @forum_threads.arrange(:order => :created_at) %>
+<% end %>
+
+<br>
+
+<%= link_to 'Back', forum_threads_path, class: "btn btn-large btn-primary" %>
