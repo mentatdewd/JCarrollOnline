@@ -65,6 +65,7 @@ JCarrollOnline::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
+  require 'gmail'
   config.action_mailer.default_url_options = { :host => "acyenixp.herokuapp.com" }
 
   # Include your app's configuration here:
