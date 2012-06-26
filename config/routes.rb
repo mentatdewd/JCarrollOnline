@@ -11,6 +11,7 @@ JCarrollOnline::Application.routes.draw do
   resources :microposts,    only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
   resources :rssfeed_entry
+  resources :password_resets
  
   root to: 'static_pages#home'
   match '/help', to: 'static_pages#help'
