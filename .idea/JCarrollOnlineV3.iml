@@ -23,7 +23,6 @@
     <orderEntry type="library" scope="PROVIDED" name="activeresource (v3.2.3, RVM: ruby-1.9.3-p194 [rails325]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.2.3, RVM: ruby-1.9.3-p194 [rails325]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.2.8, RVM: ruby-1.9.3-p194 [rails325]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="albino (v1.3.3, RVM: ruby-1.9.3-p194 [rails325]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ancestry (v1.3.0, RVM: ruby-1.9.3-p194 [rails325]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="annotate (v2.4.1.beta1, RVM: ruby-1.9.3-p194 [rails325]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v3.0.2, RVM: ruby-1.9.3-p194 [rails325]) [gem]" level="application" />
@@ -72,8 +71,6 @@
     <orderEntry type="library" scope="PROVIDED" name="oauth (v0.4.6, RVM: ruby-1.9.3-p194 [rails325]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v0.12.2, RVM: ruby-1.9.3-p194 [rails325]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, RVM: ruby-1.9.3-p194 [rails325]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="posix-spawn (v0.3.6, RVM: ruby-1.9.3-p194 [rails325]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="pygmentize (v0.0.3, RVM: ruby-1.9.3-p194 [rails325]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.4.1, RVM: ruby-1.9.3-p194 [rails325]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-cache (v1.2, RVM: ruby-1.9.3-p194 [rails325]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-ssl (v1.3.2, RVM: ruby-1.9.3-p194 [rails325]) [gem]" level="application" />
