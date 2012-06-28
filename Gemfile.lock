@@ -29,6 +29,8 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     addressable (2.2.8)
+    albino (1.3.3)
+      posix-spawn (>= 0.3.6)
     ancestry (1.3.0)
       activerecord (>= 2.3.14)
     annotate (2.4.1.beta1)
@@ -44,7 +46,7 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
-    childprocess (0.3.2)
+    childprocess (0.3.3)
       ffi (~> 1.0.6)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -105,7 +107,7 @@ GEM
     libnotify (0.5.9)
     libwebsocket (0.1.3)
       addressable
-    listen (0.4.6)
+    listen (0.4.7)
       rb-fchange (~> 0.0.5)
       rb-fsevent (~> 0.9.1)
       rb-inotify (~> 0.8.8)
@@ -122,6 +124,8 @@ GEM
     oauth (0.4.6)
     pg (0.12.2)
     polyglot (0.3.3)
+    posix-spawn (0.3.6)
+    pygmentize (0.0.3)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -152,6 +156,7 @@ GEM
       ffi (>= 0.5.0)
     rdoc (3.12)
       json (~> 1.4)
+    redcarpet (1.17.2)
     rspec (2.9.0)
       rspec-core (~> 2.9.0)
       rspec-expectations (~> 2.9.0)
@@ -203,6 +208,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  albino
   ancestry
   annotate (~> 2.4.1.beta)
   bcrypt-ruby (= 3.0.1)
@@ -222,8 +228,10 @@ DEPENDENCIES
   jquery-ui-rails
   libnotify (= 0.5.9)
   pg (= 0.12.2)
+  pygmentize
   rails (= 3.2.3)
   rb-inotify (= 0.8.8)
+  redcarpet (= 1.17.2)
   rspec-rails (= 2.9.0)
   ruby-prof
   sass-rails (~> 3.2.3)

@@ -13,7 +13,7 @@
   </div>
   <div class="forum_thread_content">
     <%= gravatar_for get_author(forum_thread.author_id), :size => 40 %>
-    <%= forum_thread.forum_thread_content %>
+    <%= markdown(forum_thread.forum_thread_content) %>
   </div>
   <div class="forum_thread_footer">
     <div class="actions">

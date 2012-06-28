@@ -16,6 +16,9 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'bootstrap-sass'
 gem 'gmail'
+gem 'redcarpet', '1.17.2'
+gem 'albino'
+gem 'pygmentize'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
