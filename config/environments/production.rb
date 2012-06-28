@@ -69,12 +69,19 @@ JCarrollOnline::Application.configure do
   config.action_mailer.default_url_options = { :host => "acyenixp.herokuapp.com" }
 
   # Include your app's configuration here:
-  config.action_mailer.smtp_settings = {
-      :address => "smtp.gmail.com",
-      :port => "587",
-      :domain => "JCarrollOnline.com", #Example: blog.local
-      :authentication => :plain,
-      :user_name => "jcarrollonline",
-      :password => "floyd1a1a"
-  }
-end
+  #config.action_mailer.smtp_settings = {
+  #    :address => "smtp.gmail.com",
+  #    :port => "587",
+  #    :domain => "JCarrollOnline.com", #Example: blog.local
+  #    :authentication => :plain,
+  #    :user_name => "jcarrollonline",
+  #    :password => "floyd1a1a"
+  #}
+  ActionMailer::Base.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :user_name            => "jcarrollonline@gmail.com",
+      :password             => 'floyd1a1a',
+      :authentication       => "plain",
+      :enable_starttls_auto => true
+  }end
