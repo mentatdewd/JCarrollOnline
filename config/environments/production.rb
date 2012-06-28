@@ -77,6 +77,7 @@ JCarrollOnline::Application.configure do
       :user_name => "jcarrollonline",
       :password => "mstjnbxzvnqlspyx"
   }
+  end
   #ActionMailer::Base.smtp_settings = {
   #    :address              => "smtp.gmail.com",
   #    :port                 => 587,
