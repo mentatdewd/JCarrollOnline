@@ -19,7 +19,8 @@ class RssfeedEntry < ActiveRecord::Base
   
   def self.add_entries(entries)
     entries.each do |entry|
-      unless exists? :guid => entry.id
+     puts ""
+       unless exists? :guid => entry.id
         create!(
           :name         => entry.title,
           :summary      => entry.summary,

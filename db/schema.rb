@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120626200719) do
+ActiveRecord::Schema.define(:version => 20120628161431) do
 
   create_table "forum_threads", :force => true do |t|
     t.string   "forum_thread_title"
@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(:version => 20120626200719) do
   create_table "rssfeed_entries", :force => true do |t|
     t.string   "name"
     t.text     "summary"
-    t.string   "url"
+    t.text     "url"
     t.datetime "published_at"
     t.string   "guid"
     t.datetime "created_at",   :null => false
