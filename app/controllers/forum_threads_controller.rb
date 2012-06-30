@@ -36,10 +36,10 @@ class ForumThreadsController < ApplicationController
   # GET /forum_threads/new
   # GET /forum_threads/new.json
   def new
-   @forum_thread = ForumThread.new(:forum_id => params[:forum_id], :parent_id => params[:parent_id])
-   @forum_thread.author_id=current_user.id
-   @forum_thread.forum_id=params[:forum_id]
-   @forum_thread.parent_id=params[:parent_id]
+    @forum_thread = ForumThread.new(:forum_id => params[:forum_id], :parent_id => params[:parent_id])
+    @forum_thread.author_id=current_user.id
+    @forum_thread.forum_id=params[:forum_id]
+    @forum_thread.parent_id=params[:parent_id]
 
     respond_to do |format|
       format.html # new.html.erb
@@ -93,9 +93,18 @@ class ForumThreadsController < ApplicationController
     @forum_parent_id = @forum_thread.root_id
     @forum_thread.destroy
 
-    respond_to do |format|
-      format.html { redirect_to forum_threads_url(:id => @forum_parent_id, :forum_id => @forum_id) }
-      format.json { head :no_content }
+    if (@forum_thread.id == @forum_parent_id)
+      respond_to do |format|
+        flash[:success] = "Forum thread deleted"
+        format.html { redirect_to forum_path(:id => @forum_id) }
+        format.json { render json: @forum, status: :deleted, location: @forum_thread}
+      end
+    else
+      respond_to do |format|
+        flash[:success] = "Reply deleted"
+        format.html { redirect_to forum_threads_url(:id => @forum_parent_id, :forum_id => @forum_id) }
+        format.json { head :no_content }
+      end
     end
   end
 
