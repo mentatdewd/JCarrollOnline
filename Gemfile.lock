@@ -37,6 +37,8 @@ GEM
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     bootstrap-sass (2.0.4.0)
+    bootstrap-will_paginate (0.0.7)
+      will_paginate
     breadcrumbs_on_rails (2.2.0)
     builder (3.0.0)
     capybara (1.1.2)
@@ -213,6 +215,7 @@ DEPENDENCIES
   annotate (~> 2.4.1.beta)
   bcrypt-ruby (= 3.0.1)
   bootstrap-sass
+  bootstrap-will_paginate
   breadcrumbs_on_rails
   capybara (= 1.1.2)
   coffee-rails (~> 3.2.1)

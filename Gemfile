@@ -18,6 +18,7 @@ gem 'gmail'
 gem 'redcarpet', '1.17.2'
 gem 'albino'
 gem 'pygmentize'
+gem 'bootstrap-will_paginate'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
