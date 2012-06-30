@@ -10,6 +10,7 @@ class ForumsController < ApplicationController
   def index
     @forums = Forum.paginate(page: params[:page])
     @user = current_user
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @forums }
@@ -26,7 +27,7 @@ class ForumsController < ApplicationController
     @forum_threads = ForumThread.where("forum_id = ?", params[:id])
     @user = current_user
 
-    #add_breadcrumb "Forum", :forum_path
+    add_breadcrumb "Forum", :forum_path
 
     respond_to do |format|
       format.html # show.html.erb

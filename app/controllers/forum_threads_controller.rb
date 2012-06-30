@@ -1,8 +1,8 @@
 class ForumThreadsController < ApplicationController
-  #before_filter :find_forum
+  before_filter :find_forum
 
   impressionist :actions => [:show, :index]
-  #add_breadcrumb 'Edit a thread', '', :only => [:edit, :update]
+  add_breadcrumb 'Edit a thread', '', :only => [:edit, :update]
 
   # GET /forum_threads
   # GET /forum_threads.json
@@ -10,6 +10,8 @@ class ForumThreadsController < ApplicationController
   def index
     @forum_thread = ForumThread.find(params[:id])
     @forum_threads = @forum_thread.subtree
+
+    add_breadcrumb "Thread", forum_threads_path
 
     respond_to do |format|
       format.html # index.html.erb
@@ -112,17 +114,17 @@ class ForumThreadsController < ApplicationController
   def add_breadcrumbs
   end
 
-  # @return [Object]
-  #def find_forum
-  #  add_breadcrumb 'Home', :root_path
-  #  add_breadcrumb 'Forums', :forums_path
-  #  if (!params[:id].nil?)
-  #    @current_forum_thread = ForumThread.find(params[:id])
-  #  else
-  #    @current_forum_thread = ForumThread.find(params[:parent_id])
-  #  end
-  #  @current_forum = Forum.find(@current_forum_thread.forum_id)
-  #  add_breadcrumb @current_forum.forum_title, forum_path(:id => @current_forum_thread.forum_id)
-  #  #add_breadcrumb ForumThread.find(params[:parent_id]).forum_thread_title, :forum_threads_path
-  #end
+  #@return [Object]
+  def find_forum
+    add_breadcrumb 'Home', :root_path
+    add_breadcrumb 'Forums', :forums_path
+    if (!params[:id].nil?)
+      @current_forum_thread = ForumThread.find(params[:id])
+    else
+      @current_forum_thread = ForumThread.find(params[:parent_id])
+    end
+    @current_forum = Forum.find(@current_forum_thread.forum_id)
+    add_breadcrumb @current_forum.forum_title, forum_path(:id => @current_forum_thread.forum_id)
+    #add_breadcrumb ForumThread.find(params[:parent_id]).forum_thread_title, :forum_threads_path
+  end
 end
