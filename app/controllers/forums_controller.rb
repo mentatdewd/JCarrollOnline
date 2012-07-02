@@ -25,6 +25,7 @@ class ForumsController < ApplicationController
     session[:current_thread] = nil
 
     @forum_threads = ForumThread.where("forum_id = ?", params[:id])
+    @forum_threads = @forum_threads.sort_by {|forum_thread| - forum_thread.updated_at.to_i}
     @user = current_user
 
     add_breadcrumb "Forum", :forum_path

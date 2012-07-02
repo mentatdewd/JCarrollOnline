@@ -25,6 +25,10 @@
     <%= f.hidden_field :parent_id %>
 
     <div class="actions">
-      <%= f.submit :class => "btn btn-large btn-primary"%>
+      <% if params[:parent_id].nil? %>
+          <%= f.submit :class => "btn btn-large btn-primary" %>
+      <% else %>
+          <%= f.submit "Reply", :class => "btn btn-large btn-primary" %>
+      <% end %>
     </div>
 <% end %>
