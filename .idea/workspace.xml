@@ -135,13 +135,13 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/user.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/video-674d23e2aafaee5ffdf42a8e340b28b4.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/video.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/JCarrollOnlineV3.iml" afterPath="$PROJECT_DIR$/.idea/JCarrollOnlineV3.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/forum_threads_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/forum_threads_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/forums_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/forums_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum_threads/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/forum_threads/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum_threads/index.html.erb" afterPath="$PROJECT_DIR$/app/views/forum_threads/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum_threads/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/forum_threads/edit.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum_threads/new.html.erb" afterPath="$PROJECT_DIR$/app/views/forum_threads/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forums/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/forums/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forums/show.html.erb" afterPath="$PROJECT_DIR$/app/views/forums/show.html.erb" />
     </list>
     <ignored path="JCarrollOnlineV3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -167,52 +167,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="forum_threads_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/forum_threads_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="58" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/forum_threads/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="31" selection-start="163" selection-end="163" vertical-scroll-proportion="-6.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/forum_threads/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="59" selection-start="198" selection-end="198" vertical-scroll-proportion="-5.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forum_threads_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/forum_threads_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="0" selection-start="1933" selection-end="1933" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forums_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="forums_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/forums_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="626" selection-end="626" vertical-scroll-proportion="0.33333334">
+            <state line="26" column="0" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#49#2426#1" expanded="false" />
-                <element signature="e#49#2426#1" expanded="false" />
-                <element signature="e#49#2426#1" expanded="false" />
-                <element signature="e#49#2426#1" expanded="false" />
-                <element signature="e#49#2426#1" expanded="false" />
                 <element signature="e#49#2426#1" expanded="false" />
                 <element signature="e#253#457#0" expanded="false" />
                 <element signature="e#354#451#0" expanded="false" />
@@ -246,10 +205,46 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="_forum_thread.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/forum_threads/_forum_thread.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="29" selection-start="977" selection-end="977" vertical-scroll-proportion="-13.75">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/forums/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="3.75">
+            <state line="20" column="87" selection-start="541" selection-end="541" vertical-scroll-proportion="-12.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/forums/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="19" selection-start="654" selection-end="654" vertical-scroll-proportion="-15.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/forums/edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="65" selection-start="78" selection-end="78" vertical-scroll-proportion="-3.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/forum_threads/edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="38" selection-start="160" selection-end="160" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -258,16 +253,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/forums/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="34" selection-start="430" selection-end="430" vertical-scroll-proportion="-4.75">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forum_thread.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/forum_thread.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="6" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0">
+            <state line="49" column="44" selection-start="1602" selection-end="1602" vertical-scroll-proportion="-16.041666">
               <folding />
             </state>
           </provider>
@@ -276,7 +262,25 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/forum_threads/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="900" selection-end="900" vertical-scroll-proportion="-18.75">
+            <state line="34" column="51" selection-start="1010" selection-end="1010" vertical-scroll-proportion="-20.333334">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/forum_threads/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="50" selection-start="155" selection-end="155" vertical-scroll-proportion="-4.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forum_threads_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/forum_threads_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="55" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.50933784">
               <folding />
             </state>
           </provider>
@@ -298,9 +302,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/config/environments/development.rb" />
-        <option value="$PROJECT_DIR$/app/views/static_pages/about.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/relationships_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/forum_threads/_forum_thread.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
@@ -311,9 +312,12 @@
         <option value="$USER_HOME$/Documents/signature.html" />
         <option value="$PROJECT_DIR$/app/views/forum_threads/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/forum_threads/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/forums_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/forums/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/forums/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/forum_threads/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/forum_threads/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/forum_threads_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/forums_controller.rb" />
       </list>
     </option>
   </component>
@@ -356,26 +360,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="RailsProjectView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JCarrollOnlineV3" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -602,6 +586,26 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="RailsProjectView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JCarrollOnlineV3" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -639,7 +643,7 @@
       <recent name="$PROJECT_DIR$/app/views/forum_threads" />
     </key>
   </component>
-  <component name="RunManager" selected="Rake.routes">
+  <component name="RunManager" selected="Rails.Development: JCarrollOnlineV3">
     <configuration default="false" name="rss_update" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="JCarrollOnlineV3" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -891,6 +895,15 @@
         <option name="RakeTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method>
+        <option name="RakeTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -922,15 +935,6 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <method>
-        <option name="RakeTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
       <method>
         <option name="RakeTask" enabled="false" />
       </method>
@@ -1137,11 +1141,11 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42138365" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2896628" sideWeight="0.5681342" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43186584" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29353234" sideWeight="0.6865828" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43186584" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3134172" sideWeight="0.9933665" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3134172" sideWeight="0.9933665" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1226,120 +1230,42 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/forum_threads/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="31" selection-start="163" selection-end="163" vertical-scroll-proportion="-6.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@rails325/gems/activesupport-3.2.3/lib/active_support/hash_with_indifferent_access.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="750" selection-end="750" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@rails325/gems/actionpack-3.2.3/lib/action_controller/metal.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="0" selection-start="4448" selection-end="4448" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@rails325/gems/actionpack-3.2.3/lib/action_controller/metal/implicit_render.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@rails325/gems/actionpack-3.2.3/lib/action_controller/metal/params_wrapper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="204" column="0" selection-start="8001" selection-end="8001" vertical-scroll-proportion="0.3006135">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@rails325/gems/activesupport-3.2.3/lib/active_support/callbacks.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="429" column="0" selection-start="14312" selection-end="14312" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/forum_threads_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="58" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="429" column="0" selection-start="14312" selection-end="14312" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@rails325/gems/actionpack-3.2.3/lib/action_controller/metal/rescue.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="70" selection-start="927" selection-end="927" vertical-scroll-proportion="0.4785276">
-          <folding />
-        </state>
+        <state line="24" column="70" selection-start="927" selection-end="927" vertical-scroll-proportion="0.4785276" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/forum_threads/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="59" selection-start="198" selection-end="198" vertical-scroll-proportion="-5.625">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/forum_threads/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/forum_threads_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="900" selection-end="900" vertical-scroll-proportion="-18.75">
+        <state line="16" column="58" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forum_threads/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="31" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/forum_thread.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="6" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/forums/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="3.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/forums/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="34" selection-start="430" selection-end="430" vertical-scroll-proportion="-4.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/forum_threads_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="1933" selection-end="1933" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="30" column="6" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/forums_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="626" selection-end="626" vertical-scroll-proportion="0.33333334">
+        <state line="26" column="0" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#49#2426#1" expanded="false" />
-            <element signature="e#49#2426#1" expanded="false" />
-            <element signature="e#49#2426#1" expanded="false" />
-            <element signature="e#49#2426#1" expanded="false" />
-            <element signature="e#49#2426#1" expanded="false" />
             <element signature="e#49#2426#1" expanded="false" />
             <element signature="e#253#457#0" expanded="false" />
             <element signature="e#354#451#0" expanded="false" />
@@ -1369,6 +1295,69 @@
             <element signature="e#2347#2373#0" expanded="false" />
             <element signature="e#2392#2412#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forums/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="44" selection-start="1602" selection-end="1602" vertical-scroll-proportion="-16.041666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forums/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="87" selection-start="541" selection-end="541" vertical-scroll-proportion="-12.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forums/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="19" selection-start="654" selection-end="654" vertical-scroll-proportion="-15.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forums/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="65" selection-start="78" selection-end="78" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forum_threads/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="38" selection-start="160" selection-end="160" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forum_threads/_forum_thread.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="29" selection-start="977" selection-end="977" vertical-scroll-proportion="-13.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forum_threads/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="51" selection-start="1010" selection-end="1010" vertical-scroll-proportion="-20.333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forum_threads/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="50" selection-start="155" selection-end="155" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/forum_threads_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="55" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.50933784">
+          <folding />
         </state>
       </provider>
     </entry>
