@@ -44,7 +44,7 @@ class ForumThreadsController < ApplicationController
     @forum_thread.parent_id=params[:parent_id]
     @current_forum = Forum.find(@forum_thread.forum_id)
     add_breadcrumb @current_forum.forum_title, forum_path(params[:forum_id])
-    if(params[:parent_id].nil?)
+    if (params[:parent_id].nil?)
       add_breadcrumb "New thread", new_forum_thread_path
     else
       add_breadcrumb "Repy to thread", new_forum_thread_path
@@ -116,6 +116,27 @@ class ForumThreadsController < ApplicationController
     end
   end
 
+  def toggle_thread_lock
+    @forum_thread = ForumThread.find(params[:thread_id])
+    forum_id = @forum_thread.forum_id
+    moderator = ForumModerator.where(:moderator_id => current_user.id, :forum_id => forum_id).count
+
+    if moderator > 0
+      if @forum_thread.locked == true
+        @forum_thread.update_attributes(:locked => false);
+        message = "Forum thread unlocked"
+      else
+        @forum_thread.update_attributes(:locked => true);
+        message = "Forum thread locked"
+      end
+    end
+    respond_to do |format|
+      flash[:success] = message #"Forum thread deleted"
+      format.html { redirect_to forum_url(forum_id) }
+      format.js
+    end
+  end
+
   private
   def add_breadcrumbs
   end
@@ -124,10 +145,10 @@ class ForumThreadsController < ApplicationController
   def add_forum_breadcrumb
     add_breadcrumb 'Home', :root_path
     add_breadcrumb 'Forums', :forums_path
-    if(!params[:id].nil?)
+    if (!params[:id].nil?)
       forum_thread = ForumThread.find(params[:id])
       forum = Forum.find(forum_thread.forum_id)
       add_breadcrumb forum.forum_title, forum_path(forum.id)
     end
-   end
+  end
 end

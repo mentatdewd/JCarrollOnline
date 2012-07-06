@@ -16,12 +16,21 @@
         <th>Last reply</th>
         <th>Recs</th>
         <th>Views</th>
+        <% if @user.moderator > 0 %>
+            <th> Lock</th>
+        <% end %>
       </tr>
 
       <% @forum_threads.each do |forum_thread| %>
           <% if forum_thread.parent.nil? %>
               <tr>
-                <td><%= link_to forum_thread.forum_thread_title, forum_threads_path(:id => forum_thread.id) %></td>
+                <div class="forum_thread_info">
+                  <% if forum_thread.locked == true %>
+                      <td><strong><%= forum_thread.forum_thread_title %></strong></td>
+                  <% else %>
+                      <td><%= link_to forum_thread.forum_thread_title, forum_threads_path(:id => forum_thread.id) %></td>
+                  <% end %>
+                </div>
                 <% if forum_thread.any_replies? %>
                     <td><%= forum_thread.thread_count(forum_thread) %></td>
                 <% else %>
@@ -36,6 +45,13 @@
                 <% end %>
                 <td><%= forum_thread.get_recs %></td>
                 <td><%= forum_thread.get_views(forum_thread) %></td>
+                <% if @user.moderator > 0 %>
+                    <% if forum_thread.locked == true %>
+                        <td><%= link_to "Unlock", toggle_thread_lock_path(:thread_id => forum_thread.id) %></td>
+                    <% else %>
+                        <td><%= link_to "Lock", toggle_thread_lock_path(:thread_id => forum_thread.id) %></td>
+                    <% end %>
+                <% end %>
               </tr>
           <% end %>
       <% end %>

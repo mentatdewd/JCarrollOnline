@@ -1,5 +1,5 @@
 class ForumThread < ActiveRecord::Base
-  attr_accessible :author_id, :forum_thread_content, :forum_thread_title, :forum_id, :parent_id
+  attr_accessible :author_id, :forum_thread_content, :forum_thread_title, :forum_id, :parent_id, :locked
   is_impressionable :counter_cache => true
   has_ancestry
 
@@ -30,5 +30,13 @@ class ForumThread < ActiveRecord::Base
   # @param [Object] forum_thread
   def get_last_reply(forum_thread)
     self.children.all(:order => :created_at).last
+  end
+
+  def is_locked(forum_thread)
+    if(ForumThread.where(:id => forum_thread).locked == true)
+      return true
+    else
+      return false
+    end
   end
 end

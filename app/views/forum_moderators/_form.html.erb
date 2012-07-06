@@ -1,0 +1,27 @@
+<%= form_for(@forum_moderator) do |f| %>
+    <% if @forum_moderator.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@forum_moderator.errors.count, "error") %> prohibited this forum_moderator from being
+            saved:</h2>
+
+          <ul>
+            <% @forum_moderator.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <% @users.each do |user| %>
+        <p>
+        <div class="checkbox_field">
+           <%= check_box_tag(:moderator_id, user.id) %>
+        </div>
+        <%= f.label :id, user.name %>
+        </p>
+    <% end %>
+    <%= f.hidden_field :forum_id %>
+    <div class="actions">
+      <%= f.submit :class => "btn btn-large btn-primary" %>
+    </div>
+<% end %>

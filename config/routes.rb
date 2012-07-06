@@ -12,6 +12,7 @@ JCarrollOnline::Application.routes.draw do
   resources :relationships, only: [:create, :destroy]
   resources :rssfeed_entry
   resources :password_resets
+  resources :forum_moderators
  
   root to: 'static_pages#home'
   match '/help', to: 'static_pages#help'
@@ -20,6 +21,7 @@ JCarrollOnline::Application.routes.draw do
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
+  match '/toggle_thread_lock', to: 'forum_threads#toggle_thread_lock'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

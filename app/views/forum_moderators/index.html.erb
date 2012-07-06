@@ -1,0 +1,12 @@
+<h1><%= @forum.forum_title %></h1>
+
+
+<strong>User</strong>
+<hr>
+<% @moderators.each do |moderator| %>
+    <p><%= link_to get_moderator(moderator.moderator_id).name, user_path(moderator.moderator_id) %>
+    &nbsp; &nbsp; <%= link_to "Delete Moderator", moderator, :confirm => "Are you sure?", :method => :delete %>
+    </p>
+<% end %>
+<hr>
+<%= link_to "New Moderator", new_forum_moderator_path(forum: @forum), class: "btn btn-large btn-primary" %>

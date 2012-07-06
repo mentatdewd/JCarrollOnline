@@ -11,7 +11,7 @@
       <%= render 'shared/stats' %>
     </section>
   </aside>
-  <div class="span8">
+  <div class="span4">
     <%= render 'follow_form' if signed_in? %>
     <% if @user.microposts.any? %>
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
@@ -20,5 +20,8 @@
       </ol>
       <%= will_paginate @microposts %>
     <% end %>
+  </div>
+  <div class="span4">
+    <h3>Moderated Forums</h3>
   </div>
 </div>

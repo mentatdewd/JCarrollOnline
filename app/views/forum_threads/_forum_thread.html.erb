@@ -22,7 +22,7 @@
           <% if current_user.id == forum_thread.author_id %>
               | <%= link_to "Edit", edit_forum_thread_path(forum_thread.id) %> |
               <%= link_to "Destroy", forum_thread, :confirm => "Are you sure?", :method => :delete %>
-    <% end %>
+          <% end %>
       <% end %>
     </div>
   </div>

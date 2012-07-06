@@ -10,8 +10,9 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :password_confirmation,
-                  has_secure_password
+  attr_accessible :name, :email, :password, :password_confirmation, has_secure_password, :moderator
+  attr_accessor :moderator
+
   has_many :microposts, dependent: :destroy
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :followed_users, through: :relationships, source: :followed
@@ -20,6 +21,8 @@ class User < ActiveRecord::Base
            dependent: :destroy
   has_many :followers, through: :reverse_relationships, source: :follower
   has_many :forum_threads, foreign_key: :author_id
+  has_many :forum_moderators
+  has_many :forums, :through => :forum_moderators
 
   before_save { |user| user.email = email.downcase }
   #before_save :create_remember_token
@@ -55,6 +58,10 @@ class User < ActiveRecord::Base
 
   def unfollow!(other_user)
     relationships.find_by_followed_id(other_user.id).destroy
+  end
+
+  def moderate_forum(forum_id)
+    forum_moderators.create!(forum_id: forum_id, user_id: self.id)
   end
 
   def get_post_count

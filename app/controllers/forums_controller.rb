@@ -27,7 +27,7 @@ class ForumsController < ApplicationController
     @forum_threads = ForumThread.where("forum_id = ?", params[:id])
     @forum_threads = @forum_threads.sort_by {|forum_thread| - forum_thread.updated_at.to_i}
     @user = current_user
-
+    @user.moderator = ForumModerator.where(:moderator_id => @user.id, :forum_id => @forum.id).count
     add_breadcrumb "Forum", :forum_path
 
     respond_to do |format|

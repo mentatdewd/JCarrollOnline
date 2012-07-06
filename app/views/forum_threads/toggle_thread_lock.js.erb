@@ -1,0 +1,2 @@
+$("#flash_notice").html('<%= escape_javascript(flash.discard(:success))%>');
+$("#forum_thread_info").html(" <% if forum_thread.locked == true %> <td><strong><%= forum_thread.forum_thread_title %></strong></td> <% else %> <td><%= link_to forum_thread.forum_thread_title, forum_threads_path(:id => forum_thread.id) %></td> <% end %> %>");

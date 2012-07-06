@@ -63,6 +63,10 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+ def forums_moderated
+   @title = "Forums Moderated"
+ end
+
   private
     def correct_user
       @user = User.find(params[:id])

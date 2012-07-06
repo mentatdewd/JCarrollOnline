@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120628161431) do
+ActiveRecord::Schema.define(:version => 20120704143339) do
+
+  create_table "forum_moderators", :force => true do |t|
+    t.integer  "moderator_id"
+    t.integer  "forum_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "forum_threads", :force => true do |t|
     t.string   "forum_thread_title"

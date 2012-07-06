@@ -8,7 +8,7 @@
     <th>Description</th>
     <th>Thread Count</th>
     <th>Last Thread</th>
-  </tr>
+   </tr>
 
   <% @forums.each do |forum| %>
       <tr>
@@ -19,6 +19,9 @@
             <td><%= forum.last_thread(forum.id).created_at %></td>
         <% else %>
             <td><%= "none" %></td>
+        <% end %>
+        <% if current_user.admin? %>
+            <td><%= link_to "Moderators", forum_moderators_path(forum: forum.id) %></td>
         <% end %>
       </tr>
   <% end %>

@@ -13,4 +13,5 @@ module ForumThreadsHelper
   def get_forum_title(forum_thread)
     Forum.find(forum_thread.forum_id).forum_title;
   end
+
 end
