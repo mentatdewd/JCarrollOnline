@@ -6,12 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9430a45d-1b1c-4bdf-a3e0-b0acc2e5c399" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/forum_moderators_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/forum_moderators_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/forum_moderators/_form.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/forum_moderators/index.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/forum_moderators/new.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/forum_threads/toggle_thread_lock.js.erb" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Thumbs-0c338eebe64c8142b96f810b117099e7.db" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Thumbs.db" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-0f144893e4b5df63aab4f0b9a528c324.css" afterPath="" />
@@ -141,22 +135,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/user.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/video-674d23e2aafaee5ffdf42a8e340b28b4.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/video.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/forum_threads_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/forum_threads_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/forums_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/forums_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/forum_threads_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/forum_threads_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/forums_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/forums_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/forum.rb" afterPath="$PROJECT_DIR$/app/models/forum.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/forum_thread.rb" afterPath="$PROJECT_DIR$/app/models/forum_thread.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forum_threads/_forum_thread.html.erb" afterPath="$PROJECT_DIR$/app/views/forum_threads/_forum_thread.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forums/index.html.erb" afterPath="$PROJECT_DIR$/app/views/forums/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forums/show.html.erb" afterPath="$PROJECT_DIR$/app/views/forums/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_micropost_form.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_micropost_form.html.erb" />
     </list>
     <ignored path="JCarrollOnlineV3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -252,19 +231,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/forums/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="53" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.39002267">
+            <state line="36" column="53" selection-start="1126" selection-end="1126" vertical-scroll-proportion="-13.666667">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="destroy.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/microposts/destroy.js.erb">
+      <file leaf-file-name="_micropost_form.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/shared/_micropost_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="34" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
+            <state line="3" column="82" selection-start="253" selection-end="253" vertical-scroll-proportion="0.094736844">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="microposts_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/microposts_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="73" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="micropost.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/micropost.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -274,24 +271,6 @@
         <entry file="file://$PROJECT_DIR$/app/views/forum_threads/toggle_thread_lock.js.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="2" column="48" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_micropost.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/microposts/_micropost.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="57" selection-start="637" selection-end="637" vertical-scroll-proportion="-12.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/microposts/create.js.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="107" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -313,7 +292,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/helpers/forum_threads_helper.rb" />
         <option value="$PROJECT_DIR$/app/models/forum_moderator.rb" />
         <option value="$PROJECT_DIR$/app/models/forum.rb" />
         <option value="$PROJECT_DIR$/app/helpers/forums_helper.rb" />
@@ -329,6 +307,7 @@
         <option value="$PROJECT_DIR$/app/helpers/forum_moderators_helper.rb" />
         <option value="$PROJECT_DIR$/app/controllers/forum_moderators_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/forum_threads_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/shared/_micropost_form.html.erb" />
       </list>
     </option>
   </component>
@@ -1207,11 +1186,11 @@
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.6855346" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914045" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42138365" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42138365" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29353234" sideWeight="0.5681342" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43186584" sideWeight="0.9933665" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29353234" sideWeight="0.5786164" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43186584" sideWeight="0.9933665" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3134172" sideWeight="0.9933665" order="4" side_tool="false" content_ui="tabs" />
@@ -1299,20 +1278,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@rails325/gems/actionpack-3.2.3/lib/abstract_controller/collector.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@rails325/gems/actionpack-3.2.3/lib/action_controller/metal/mime_responds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="312" column="0" selection-start="10732" selection-end="10732" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@rails325/gems/actionpack-3.2.3/lib/action_dispatch/http/mime_negotiation.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="85" column="0" selection-start="2609" selection-end="2609" vertical-scroll-proportion="0.0">
@@ -1344,13 +1309,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/microposts/_micropost.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="57" selection-start="637" selection-end="637" vertical-scroll-proportion="-12.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/microposts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="73" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1431,7 +1389,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/forums/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="53" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.39002267">
+        <state line="36" column="53" selection-start="1126" selection-end="1126" vertical-scroll-proportion="-13.666667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/microposts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="73" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/micropost.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shared/_micropost_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="82" selection-start="253" selection-end="253" vertical-scroll-proportion="0.094736844">
           <folding />
         </state>
       </provider>
