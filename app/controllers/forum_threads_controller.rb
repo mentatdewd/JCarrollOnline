@@ -43,7 +43,9 @@ class ForumThreadsController < ApplicationController
     @forum_thread.forum_id=params[:forum_id]
     @forum_thread.parent_id=params[:parent_id]
     @current_forum = Forum.find(@forum_thread.forum_id)
+
     add_breadcrumb @current_forum.forum_title, forum_path(params[:forum_id])
+
     if (params[:parent_id].nil?)
       add_breadcrumb "New thread", new_forum_thread_path
     else
