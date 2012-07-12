@@ -24,7 +24,7 @@
       <ul class="users">
         <%= render @users %>
       </ul>
-      <%= will_paginate @users %>
+      <%= will_paginate @users, :inner_window => 2, :outer_window => 2 %>
     <% end %>
   </div>
 </div>

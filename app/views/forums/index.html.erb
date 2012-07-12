@@ -20,8 +20,10 @@
         <% else %>
             <td><%= "none" %></td>
         <% end %>
-        <% if current_user.admin? %>
+        <% if signed_in? %>
+             <% if current_user.admin? %>
             <td><%= link_to "Moderators", forum_moderators_path(forum: forum.id) %></td>
+                <% end %>
         <% end %>
       </tr>
   <% end %>
