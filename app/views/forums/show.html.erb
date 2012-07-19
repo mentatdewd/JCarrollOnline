@@ -16,9 +16,11 @@
         <th>Last reply</th>
         <th>Recs</th>
         <th>Views</th>
+        <% if signed_in? %>
         <% if @user.moderator > 0 %>
             <th> Lock</th>
         <% end %>
+            <% end %>
       </tr>
 
       <% @forum_threads.each do |forum_thread| %>
@@ -45,6 +47,7 @@
                 <% end %>
                 <td><%= forum_thread.get_recs %></td>
                 <td><%= forum_thread.get_views(forum_thread) %></td>
+                <% if signed_in? %>
                 <% if @user.moderator > 0 %>
                     <% if forum_thread.locked == true %>
                         <td><%= link_to "Unlock", toggle_thread_lock_path(:thread_id => forum_thread.id) %></td>
@@ -52,6 +55,7 @@
                         <td><%= link_to "Lock", toggle_thread_lock_path(:thread_id => forum_thread.id) %></td>
                     <% end %>
                 <% end %>
+                    <% end %>
               </tr>
           <% end %>
       <% end %>

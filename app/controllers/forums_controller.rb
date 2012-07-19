@@ -21,13 +21,19 @@ class ForumsController < ApplicationController
   # GET /forums/1.json
   def show
     @forum = Forum.find(params[:id])
-    session[:current_forum] = params[:id]
-    session[:current_thread] = nil
+    if (signed_in?)
+
+      session[:current_forum] = params[:id]
+      session[:current_thread] = nil
+    end
 
     @forum_threads = ForumThread.where("forum_id = ?", params[:id])
-    @forum_threads = @forum_threads.sort_by {|forum_thread| - forum_thread.updated_at.to_i}
+    @forum_threads = @forum_threads.sort_by { |forum_thread| -forum_thread.updated_at.to_i }
+
+    if(signed_in?)
     @user = current_user
     @user.moderator = ForumModerator.where(:moderator_id => @user.id, :forum_id => @forum.id).count
+    end
     add_breadcrumb "Forum", :forum_path
 
     respond_to do |format|

@@ -1,5 +1,5 @@
 class Forum < ActiveRecord::Base
-  attr_accessible :category_id, :description, :forum_title
+  attr_accessible :category_id, :description, :forum_title, :forum_id
 
   require 'ruby-prof'
   has_many :forum_threads
