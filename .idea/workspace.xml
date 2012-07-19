@@ -135,10 +135,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/user.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/video-674d23e2aafaee5ffdf42a8e340b28b4.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/video.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/forums_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/forums_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/forum.rb" afterPath="$PROJECT_DIR$/app/models/forum.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forums/show.html.erb" afterPath="$PROJECT_DIR$/app/views/forums/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static_pages/privacypolicy.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/privacypolicy.erb" />
     </list>
     <ignored path="JCarrollOnlineV3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -182,10 +179,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/forums/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="56" selection-start="2277" selection-end="2277" vertical-scroll-proportion="0.6236559">
+            <state line="58" column="56" selection-start="2277" selection-end="2277" vertical-scroll-proportion="-12.083333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="privacypolicy.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/static_pages/privacypolicy.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="50" selection-start="320" selection-end="320" vertical-scroll-proportion="0.09677419">
               <folding />
             </state>
           </provider>
@@ -269,7 +275,6 @@
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/forum_moderators_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/static_pages/privacypolicy.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
@@ -277,6 +282,7 @@
         <option value="$PROJECT_DIR$/app/models/forum.rb" />
         <option value="$PROJECT_DIR$/app/controllers/forums_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/forums/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/static_pages/privacypolicy.erb" />
       </list>
     </option>
   </component>
@@ -1153,11 +1159,6 @@
         <state line="3" column="21" selection-start="96" selection-end="96" vertical-scroll-proportion="0.09018036" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/static_pages/privacypolicy.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="48" selection-start="4020" selection-end="4020" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/static_pages_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -1228,7 +1229,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/forums/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="56" selection-start="2277" selection-end="2277" vertical-scroll-proportion="0.6236559">
+        <state line="58" column="56" selection-start="2277" selection-end="2277" vertical-scroll-proportion="-12.083333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/static_pages/privacypolicy.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="50" selection-start="320" selection-end="320" vertical-scroll-proportion="0.09677419">
           <folding />
         </state>
       </provider>
