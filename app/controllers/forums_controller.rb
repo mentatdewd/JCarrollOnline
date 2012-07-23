@@ -20,7 +20,7 @@ class ForumsController < ApplicationController
   # GET /forums/1
   # GET /forums/1.json
   def show
-    @forum = Forum.find(params[:id])
+      @forum = Forum.find(params[:id])
     if (signed_in?)
 
       session[:current_forum] = params[:id]
@@ -38,6 +38,29 @@ class ForumsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
+      format.json { render json: @forum }
+    end
+  end
+
+  def show_ringbuddy
+    @forum = Forum.find_by_forum_title("Ringbuddy")
+    if (signed_in?)
+
+      session[:current_forum] = params[:id]
+      session[:current_thread] = nil
+    end
+
+    @forum_threads = ForumThread.where("forum_id = ?", @forum.id)
+    @forum_threads = @forum_threads.sort_by { |forum_thread| -forum_thread.updated_at.to_i }
+
+    if(signed_in?)
+      @user = current_user
+      @user.moderator = ForumModerator.where(:moderator_id => @user.id, :forum_id => @forum.id).count
+    end
+    add_breadcrumb "Forum", :forum_path
+
+    respond_to do |format|
+      format.html { redirect_to forum_path :action => "show", :id => @forum.id }# show.html.erb
       format.json { render json: @forum }
     end
   end

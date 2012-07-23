@@ -22,6 +22,7 @@ JCarrollOnline::Application.routes.draw do
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   match '/toggle_thread_lock', to: 'forum_threads#toggle_thread_lock'
+  match '/ringbuddy', to: 'forums#show_ringbuddy'
   match '/privacy', to: 'static_pages#privacypolicy'
 
   # The priority is based upon order of creation:
