@@ -142,6 +142,9 @@ class ForumThreadsController < ApplicationController
   private
   def add_breadcrumbs
   end
+  
+def find_all_by_forum_id
+end
 
   #@return [Object]
   def add_forum_breadcrumb

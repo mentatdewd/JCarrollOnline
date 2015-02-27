@@ -13,15 +13,18 @@ class Forum < ActiveRecord::Base
 
   # @param [Object] id
   def thread_count(id)
-    ForumThread.find_all_by_forum_id(id).count()
+    #ForumThread.find_all_by_forum_id(id).count()
+    ForumThread.where(forum_id: id).count()
   end
 
   # @param [Object] id
   def last_thread(id)
-    ForumThread.find_all_by_forum_id(id).last()
+    #ForumThread.find_all_by_forum_id(id).last()
+    ForumThread.where(forum_id: id).last()
   end
 
-  def moderators(user_id)
-    ForumModerator.find_all_by_user_id(user_id)
+  def moderators(id)
+    #ForumModerator.find_all_by_user_id(user_id)
+    ForumThreadwhere(user_id: id)
   end
 end
