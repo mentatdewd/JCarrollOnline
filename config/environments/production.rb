@@ -77,9 +77,6 @@ JCarrollOnline::Application.configure do
       :user_name => "jcarrollonline",
       :password => "mstjnbxzvnqlspyx"
   }
-  
-  config.eager_load = true
-  
   end
   #ActionMailer::Base.smtp_settings = {
   #    :address              => "smtp.gmail.com",

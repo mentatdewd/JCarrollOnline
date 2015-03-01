@@ -15,16 +15,15 @@ JCarrollOnline::Application.routes.draw do
   resources :forum_moderators
  
   root to: 'static_pages#home'
-  get '/help', to: 'static_pages#help'
-  get '/about', to: 'static_pages#about'
-  get '/contact', to: 'static_pages#contact'
-  get '/signup', to: 'users#new'
-  get '/signin', to: 'sessions#new'
-  get '/signout', to: 'sessions#destroy', via: :delete
-  get '/toggle_thread_lock', to: 'forum_threads#toggle_thread_lock'
-  get '/ringbuddy', to: 'forums#show_ringbuddy'
-  get '/privacy', to: 'static_pages#privacypolicy'
-  get '/sandbox', to: 'sandbox#show'
+  match '/help', to: 'static_pages#help'
+  match '/about', to: 'static_pages#about'
+  match '/contact', to: 'static_pages#contact'
+  match '/signup', to: 'users#new'
+  match '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
+  match '/toggle_thread_lock', to: 'forum_threads#toggle_thread_lock'
+  match '/ringbuddy', to: 'forums#show_ringbuddy'
+  match '/privacy', to: 'static_pages#privacypolicy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
