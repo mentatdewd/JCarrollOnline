@@ -24,6 +24,7 @@ JCarrollOnline::Application.routes.draw do
   match '/toggle_thread_lock', to: 'forum_threads#toggle_thread_lock'
   match '/ringbuddy', to: 'forums#show_ringbuddy'
   match '/privacy', to: 'static_pages#privacypolicy'
+  match '/sandbox', to: 'sandbox#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
