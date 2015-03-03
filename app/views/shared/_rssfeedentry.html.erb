@@ -1,6 +1,6 @@
 <section>
   <img src='/assets/feed-icon-28x28.png' align='left'/>
-  <h4 style="font-size: 2.2em; margin-bottom: 10px; margin-left: 40px">Extreme Tech RSS</h4>
+  <h4 style="font-size: 2.2em; margin-bottom: 10px; margin-left: 40px">Mariners News</h4>
   <ul>
     <% for entry in RssfeedEntry.all(:limit => 10, :order => "published_at desc") %>
       <li style="border-top: 1px solid #eaeaea"><%= link_to h(entry.name), entry.url %></li>

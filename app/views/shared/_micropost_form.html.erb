@@ -1,9 +1,27 @@
+<%= stylesheet_link_tag "custom"%>
 <%= form_for @micropost, :remote => true, :html => {:id => 'micropost_form'} do |f| %>
-    <%= render 'shared/error_messages', object: f.object %>
-    <div class="field">
-      <%= f.text_area :content, placeholder: "Compose new micropost (140 char max)..." %>
-    </div>
-    <div class="actions">
-      <%= f.submit "Post", class: "btn btn-large btn-primary" %>
-    </div>
+<%= render 'shared/error_messages', object: f.object %>
+<div class="field">
+	<%= f.text_area :content, placeholder: "Compose new micropost (140 char max)...", :onKeyup =>  "textCounter(this, 'counter', 140)" %>
+</div>
+<div style="width: 50% float: left">
+	<input disabled  maxlength="3" size="3" value="140" id="counter">
+</div>
+<div style="width: 50% float: left">&nbsp;<font color="#aaa">Characters left</font>
+</div>
+<div style="clear: both"/>
+<script>
+	function textCounter(field, field2, maxlimit) {
+		var countfield = document.getElementById(field2);
+		if (field.value.length > maxlimit) {
+			field.value = field.value.substring(0, maxlimit);
+			return false;
+		} else {
+			countfield.value = maxlimit - field.value.length;
+		}
+	}
+</script>
+<div class="actions">
+	<%= f.submit "Post", class: "btn btn-large btn-primary" %>
+</div>
 <% end %>
