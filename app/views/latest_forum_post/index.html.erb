@@ -1,0 +1,27 @@
+<h1>Latest Forum Threads</h1>
+
+<h2><%= link_to "All Forums", forums_path %></h2>
+
+<table align="center" cellpadding="10px">
+	<col width="20%">
+	<col width="60%">
+	<col width="20%">
+	<tr>
+		<th>Forum</th>
+		<th>Content</th>
+		<th>Date</th>
+	</tr>
+
+	<% @forum_threads.each do |forumThread| %>
+	<tr>
+			<td>
+		<div class=columnTitle>
+				<%= link_to forumThread.forum.forum_title, forumThread.forum %>
+		</div> 				</td>
+		<td><%= forumThread.forum_thread_title %></td>
+		<td><%= forumThread.created_at.strftime("%H: %M -- %d %b. %Y") %></td>
+	</tr>
+	<% end %>
+</table>
+<%= will_paginate @forum_threads, :inner_window => 2, :outer_window => 1%>
+

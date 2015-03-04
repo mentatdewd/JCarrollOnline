@@ -1,0 +1,2 @@
+module LatestForumPostControllerHelper
+end
