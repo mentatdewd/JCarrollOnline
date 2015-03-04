@@ -3,3 +3,6 @@
 
 <%=  nested_threads @forum_threads.arrange(:order => :created_at) %>
 
+  <% if signed_in? %>
+    <%= link_to "Post", new_forum_thread_path(:parent_id => @forum_thread, :forum_id => @forum_thread.forum_id), class: "btn btn-large btn-primary" %>
+<% end %>

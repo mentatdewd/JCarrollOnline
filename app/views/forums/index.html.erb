@@ -20,7 +20,7 @@
 		<td><%= forum.description %></td>
 		<td><%= forum.thread_count(forum.id) %></td>
 		<% if forum.thread_count(forum.id)!=0 %>
-		<td><%= forum.last_thread(forum.id).created_at %></td>
+		<td><%= forum.last_thread(forum.id).created_at.strftime("%H:%M -- %d %b. %Y") %></td>
 		<% else %>
 		<td><%= "none" %></td>
 		<% end %>
