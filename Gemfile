@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby "1.9.3"
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.13'
 gem 'pg', '0.12.2'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'will_paginate'
@@ -47,7 +47,6 @@ group :assets do
 end
 
 group :test do
-  gem 'rspec-rails', '2.9.0'
   gem 'capybara', '1.1.2'
   gem 'rb-inotify', '0.8.8'
   gem 'libnotify', '0.5.9'

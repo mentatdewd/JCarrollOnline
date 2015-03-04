@@ -1,69 +1,75 @@
 <h1> <%= @forum.forum_title %> </h1>
 
 <p>
-  <b><%= @forum.description %></b>
+	<b><%= @forum.description %></b>
 </p>
 
 <hr>
 
 <% if @forum_threads.any? %>
-    <table cellpadding="10px">
-      <tr>
-        <th>Title</th>
-        <th>Replies</th>
-        <th>Author</th>
-        <th>Start time</th>
-        <th>Last reply</th>
-        <th>Recs</th>
-        <th>Views</th>
-        <% if signed_in? %>
-        <% if @user.moderator > 0 %>
-            <th> Lock</th>
-        <% end %>
-            <% end %>
-      </tr>
+<table cellpadding="10px">
+	<tr>
+		<th>Title</th>
+		<th>Replies</th>
+		<th>Author</th>
+		<th>Start time</th>
+		<th>Last reply</th>
+		<th>Recs</th>
+		<th>Views</th>
+		<% if signed_in? %>
+		<% if @user.moderator > 0 %>
+		<th> Lock</th>
+		<% end %>
+		<% end %>
+	</tr>
 
-      <% @forum_threads.each do |forum_thread| %>
-          <% if forum_thread.parent.nil? %>
-              <tr>
-                <div class="forum_thread_info">
-                  <% if forum_thread.locked == true %>
-                      <td><strong><%= forum_thread.forum_thread_title %></strong></td>
-                  <% else %>
-                      <td><%= link_to forum_thread.forum_thread_title, forum_threads_path(:id => forum_thread.id) %></td>
-                  <% end %>
-                </div>
-                <% if forum_thread.any_replies? %>
-                    <td><%= forum_thread.thread_count(forum_thread) %></td>
-                <% else %>
-                    <td><%= "0" %></td>
-                <% end %>
-                <td><%= link_to get_author(forum_thread.author_id).name, user_path(forum_thread.author_id) %></td>
-                <td><%= forum_thread.created_at.strftime("%r %B %d, %Y") %></td>
-                <% if forum_thread.any_replies? %>
-                    <td><%= forum_thread.get_last_reply(forum_thread).created_at.strftime("%r %B %d, %Y") %></td>
-                <% else %>
-                    <td><%= "" %></td>
-                <% end %>
-                <td><%= forum_thread.get_recs %></td>
-                <td><%= forum_thread.get_views(forum_thread) %></td>
-                <% if signed_in? %>
-                <% if @user.moderator > 0 %>
-                    <% if forum_thread.locked == true %>
-                        <td><%= link_to "Unlock", toggle_thread_lock_path(:thread_id => forum_thread.id) %></td>
-                    <% else %>
-                        <td><%= link_to "Lock", toggle_thread_lock_path(:thread_id => forum_thread.id) %></td>
-                    <% end %>
-                <% end %>
-                    <% end %>
-              </tr>
-          <% end %>
-      <% end %>
-    </table>
+	<% @forum_threads.each do |forum_thread| %>
+	<% if forum_thread.parent.nil? %>
+	<tr>
+		<div class="forum_thread_info">
+			<% if forum_thread.locked == true %>
+			<td>
+			<div class=columnTitle>
+				<strong><%= forum_thread.forum_thread_title %></strong>
+			</div></td>
+			<% else %>
+			<td>
+			<div class=columnTitle>
+				<%= link_to forum_thread.forum_thread_title, forum_threads_path(:id => forum_thread.id) %>
+			</div></td>
+			<% end %>
+		</div>
+		<% if forum_thread.any_replies? %>
+		<td><%= forum_thread.thread_count(forum_thread) %></td>
+		<% else %>
+		<td><%= "0" %></td>
+		<% end %>
+		<td><%= link_to get_author(forum_thread.author_id).name, user_path(forum_thread.author_id) %></td>
+		<td><%= forum_thread.created_at.strftime("%r %B %d, %Y") %></td>
+		<% if forum_thread.any_replies? %>
+		<td><%= forum_thread.get_last_reply(forum_thread).created_at.strftime("%r %B %d, %Y") %></td>
+		<% else %>
+		<td><%= "" %></td>
+		<% end %>
+		<td><%= forum_thread.get_recs %></td>
+		<td><%= forum_thread.get_views(forum_thread) %></td>
+		<% if signed_in? %>
+		<% if @user.moderator > 0 %>
+		<% if forum_thread.locked == true %>
+		<td><%= link_to "Unlock", toggle_thread_lock_path(:thread_id => forum_thread.id) %></td>
+		<% else %>
+		<td><%= link_to "Lock", toggle_thread_lock_path(:thread_id => forum_thread.id) %></td>
+		<% end %>
+		<% end %>
+		<% end %>
+	</tr>
+	<% end %>
+	<% end %>
+</table>
 <% end %>
 
 <hr>
 
 <% if signed_in? %>
-    <%= link_to "New thread", new_forum_thread_path(:forum_id => @forum.id), class: "btn btn-large btn-primary" %>
+<%= link_to "New thread", new_forum_thread_path(:forum_id => @forum.id), class: "btn btn-large btn-primary" %>
 <% end %>
