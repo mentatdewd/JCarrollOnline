@@ -1,48 +1,48 @@
 <% if signed_in? %>
-    <div class="row" xmlns="http://www.w3.org/1999/html">
-      <aside class="span4">
-        <section>
-          <%= render 'shared/user_info' %>
-        </section>
-        <section>
-          <%= render 'shared/stats' %>
-        </section>
-        <section>
-          <%= render 'shared/micropost_form' %>
-        </section>
-      </aside>
-      <div class="span4">
-        <h3>Posts</h3>
+<div class="row" xmlns="http://www.w3.org/1999/html">
+	<aside class="col-md-3">
+		<section>
+			<%= render 'shared/user_info' %>
+		</section>
+		<section>
+			<%= render 'shared/stats' %>
+		</section>
+		<section>
+			<%= render 'shared/micropost_form' %>
+		</section>
+	</aside>
+	<div class="col-md-6">
+		<h3>Posts</h3>
 
-        <div id="sharedFeedSelector"><%= render 'shared/feed' %></div>
-      </div>
-      <aside class="span4">
-        <%= render partial: 'shared/rssfeedentry' %>
-      </aside>
-    </div>
+		<div id="sharedFeedSelector">
+			<%= render 'shared/feed' %>
+		</div>
+	</div>
+	<aside class="col-md-3">
+		<%= render partial: 'shared/rssfeedentry' %>
+	</aside>
+</div>
 <% else %>
-    <div class="center hero-unit">
-      <h1>Welcome to JCarrollOnline</h1>
+<div class="center hero-unit">
+	<h1>Welcome to JCarrollOnline</h1>
 
-      <h2>
-        This is the home page for JCarrollOnline
-      </h2>
+	<h2> This is the home page for JCarrollOnline </h2>
 
-      <div class="center hero-unit">
-        <h3> The
-          <a href="https://play.google.com/store/apps/details?id=com.mentatware.ringbuddy&feature=search_result#?t=W251bGwsMSwyLDEsImNvbS5tZW50YXR3YXJlLnJpbmdidWRkeSJd">Ringbuddy</a>
-          application for Android has launched! </h3>
-        With Ringbuddy you can create a ringtone schedule for each of your contacts. For example, at 8am Tina's ringtone
-        will switch to an appropriate daytime ringtone, at 5pm Tina's ringtone will switch to a different ringtone of
-        your choosing, and at 11pm Tina's ringtone will switch to silent. Create a custom ringtone schedule for each of
-        your contacts, or with the handy All Contacts button set a custom schedule for all. <br> It's ringtone management
-        done right! <br> <br> Visit the <%= link_to "Ringbuddy", ringbuddy_path %> forum!
-      </div>
-      <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
-    </div>
-    <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+	<div class="center hero-unit">
+		<h3> The <a href="https://play.google.com/store/apps/details?id=com.mentatware.ringbuddy&feature=search_result#?t=W251bGwsMSwyLDEsImNvbS5tZW50YXR3YXJlLnJpbmdidWRkeSJd">Ringbuddy</a> application for Android has launched! </h3>
+		With Ringbuddy you can create a ringtone schedule for each of your contacts. For example, at 8am Tina's ringtone
+		will switch to an appropriate daytime ringtone, at 5pm Tina's ringtone will switch to a different ringtone of
+		your choosing, and at 11pm Tina's ringtone will switch to silent. Create a custom ringtone schedule for each of
+		your contacts, or with the handy All Contacts button set a custom schedule for all.
+		<br>
+		It's ringtone management
+		done right!
+		<br>
+		<br>
+		Visit the <%= link_to "Ringbuddy", ringbuddy_path %> forum!
+	</div>
+	<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+</div>
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
 <% end %>
-
-
-
 
