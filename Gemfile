@@ -4,7 +4,7 @@ ruby "1.9.3"
 
 gem 'rails', '3.2.13'
 gem 'pg', '0.12.2'
-gem 'bcrypt-ruby', '3.0.1'
+gem 'bcrypt-ruby', '~>3.0.0'
 gem 'will_paginate'
 gem 'feedjira'
 gem 'gravtastic'
@@ -28,10 +28,17 @@ gem 'builder', '3.0.4'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-  gem 'rspec-rails', '2.9.0'
-  gem 'guard-rspec', '0.5.5'
+  gem 'guard'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'spring'
   gem 'annotate', '~> 2.4.1.beta'
   gem 'faker', '1.0.1'
+  gem 'rb-inotify'
+  gem 'minitest', '4.7.5'
+  gem 'guard-minitest'
+  gem 'database_cleaner'
+  gem 'pry'
 end
 
 # Gems used only for assets and not required
@@ -47,12 +54,11 @@ group :assets do
 end
 
 group :test do
-  gem 'capybara', '1.1.2'
-  gem 'rb-inotify', '0.8.8'
-  gem 'libnotify', '0.5.9'
-  gem 'guard-spork', '0.3.2'
-  gem 'spork', '0.8.4'
-  gem 'factory_girl_rails', '1.4.0'
+  gem 'capybara'
+  gem 'libnotify'
+  gem 'guard-spork'
+  gem 'spork'
+  gem 'factory_girl_rails'
 end
 
 # To use ActiveModel has_secure_password

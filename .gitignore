@@ -16,3 +16,6 @@
 
 # Ignore database.yml
 /config/*.yml
+
+# Ignore Spring files.
+/spring/*.pid

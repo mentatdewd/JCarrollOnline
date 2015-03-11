@@ -4,4 +4,10 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+require 'rspec/core/rake_task'
+ 
+RSpec::Core::RakeTask.new do |task|
+  task.rspec_opts = ['--color', '--format', 'doc']
+end
+
 JCarrollOnline::Application.load_tasks

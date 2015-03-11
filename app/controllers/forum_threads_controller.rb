@@ -8,6 +8,7 @@ class ForumThreadsController < ApplicationController
   # GET /forum_threads.json
   # @return [Object]
   def index
+    puts 'In forum_threads_controller -- index'
     @forum_thread = ForumThread.find(params[:id])
     @forum_threads = @forum_thread.subtree
 
@@ -22,6 +23,7 @@ class ForumThreadsController < ApplicationController
   # GET /forum_threads/1
   # GET /forum_threads/1.json
   def show
+    puts 'In forum_threads_controller -- show'
     @forum_thread = ForumThread.find(params[:id])
     impressionist(@forum_thread) #message is optional
 
@@ -38,7 +40,11 @@ class ForumThreadsController < ApplicationController
   # GET /forum_threads/new
   # GET /forum_threads/new.json
   def new
+    print 'In forum_threads_controller -- new - forum_id is: '
+    puts params[:forum_id]
     @forum_thread = ForumThread.new(:forum_id => params[:forum_id], :parent_id => params[:parent_id])
+    print 'Created forum_thread id: '
+    puts @forum_thread.id
     @forum_thread.author_id=current_user.id
     @forum_thread.forum_id=params[:forum_id]
     @forum_thread.parent_id=params[:parent_id]
@@ -148,7 +154,11 @@ class ForumThreadsController < ApplicationController
     add_breadcrumb 'Home', :root_path
     add_breadcrumb 'Forums', :forums_path
     if (!params[:id].nil?)
+      print 'In add_forum_breadcrumb -- Finding forum_thread id: '
+      puts params[:id]
       forum_thread = ForumThread.find(params[:id])
+      print 'In add_forum_breadcrumb -- Finding forum: '
+      puts forum_thread.forum_id
       forum = Forum.find(forum_thread.forum_id)
       add_breadcrumb forum.forum_title, forum_path(forum.id)
     end
