@@ -40,11 +40,7 @@ class ForumThreadsController < ApplicationController
   # GET /forum_threads/new
   # GET /forum_threads/new.json
   def new
-    print 'In forum_threads_controller -- new - forum_id is: '
-    puts params[:forum_id]
     @forum_thread = ForumThread.new(:forum_id => params[:forum_id], :parent_id => params[:parent_id])
-    print 'Created forum_thread id: '
-    puts @forum_thread.id
     @forum_thread.author_id=current_user.id
     @forum_thread.forum_id=params[:forum_id]
     @forum_thread.parent_id=params[:parent_id]
