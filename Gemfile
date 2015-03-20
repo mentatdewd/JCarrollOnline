@@ -28,16 +28,9 @@ gem 'builder', '3.0.4'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-  gem 'guard'
-  gem 'rspec-rails'
-  gem 'guard-rspec'
-  gem 'spring'
   gem 'annotate', '~> 2.4.1.beta'
   gem 'faker', '1.0.1'
   gem 'rb-inotify'
-  gem 'minitest', '4.7.5'
-  gem 'guard-minitest'
-  gem 'database_cleaner'
   gem 'pry'
 end
 
@@ -59,6 +52,13 @@ group :test do
   gem 'guard-spork'
   gem 'spork'
   gem 'factory_girl_rails'
+  gem 'guard'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'spring'
+  gem 'minitest', '4.7.5'
+  gem 'guard-minitest'
+  gem 'database_cleaner'
 end
 
 # To use ActiveModel has_secure_password
