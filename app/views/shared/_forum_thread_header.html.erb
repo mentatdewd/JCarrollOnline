@@ -1,0 +1,35 @@
+<div class="forum_thread_header">
+	<header>
+		<%= link_to get_author(forum_thread.author_id).name, user_path(forum_thread.author_id) %>
+		<%= "(" %>
+		<%= get_author(forum_thread.author_id).get_post_count %>
+		<%= " posts)" %>
+		<br>
+
+		<div class="header_title">
+			<% if forum_thread.thread_post_number != nil %>
+			<%= content_tag(:div, "%d. %s" % [forum_thread.thread_post_number, forum_thread.forum_thread_title], :class => 'header_title', :id => "post".concat(forum_thread.id.to_s), :name => "post".concat(forum_thread.id.to_s)) %>
+			<% else %>
+			<%= content_tag(:div, forum_thread.forum_thread_title, :class => 'header_title', :id => "post".concat(forum_thread.id.to_s), :name => "post".concat(forum_thread.id.to_s)) %>
+			<% end %>
+		</div>
+		<% if forum_thread.parent != nil %>
+		<div class="thread_info" align="right">
+			<div class="reply_to">
+				<% if forum_thread.parent.thread_post_number == 1 %>
+				<%= link_to "Reply to %s's Original Post" % [get_author(forum_thread.parent.author_id).name], url_for("#".concat("post").concat(forum_thread.parent.id.to_s)), :id => "post".concat(forum_thread.parent.id.to_s)%>
+				<% else %>
+					<% if forum_thread.parent.thread_post_number != nil %>
+					<%= link_to "Reply to %s's Post # %d" % [get_author(forum_thread.parent.author_id).name, forum_thread.parent.thread_post_number], url_for("#".concat("post").concat(forum_thread.parent.id.to_s)), :id => "post".concat(forum_thread.parent.id.to_s)%>
+					<% else %>
+					<%= link_to "Reply to %s's Post" % get_author(forum_thread.parent.author_id).name, url_for("#".concat("post").concat(forum_thread.parent.id.to_s)), :id => "post".concat(forum_thread.parent.id.to_s)%>
+					<% end %>
+				<% end %>
+				<div class="created_at">
+					<%= forum_thread.created_at.strftime("%H:%M -- %d %b. %Y") %>
+				</div>
+			</div>
+		</div>
+		<% end %>
+	</header>
+</div>

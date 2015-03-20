@@ -1,5 +1,5 @@
 class ForumThread < ActiveRecord::Base
-  attr_accessible :author_id, :forum_thread_content, :forum_thread_title, :forum_id, :parent_id, :locked
+  attr_accessible :author_id, :forum_thread_content, :forum_thread_title, :forum_id, :parent_id, :locked, :thread_post_number
   is_impressionable :counter_cache => true
   has_ancestry
 

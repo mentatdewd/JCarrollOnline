@@ -68,6 +68,13 @@ class ForumThreadsController < ApplicationController
   # POST /forum_threads.json
   def create
     @forum_thread = ForumThread.new(params[:forum_thread])
+    if @forum_thread.parent != nil
+    @forum_threads = @forum_thread.parent.root.subtree
+     @forum_thread.thread_post_number = @forum_threads.count + 1
+   else
+    @forum_thread.thread_post_number = 1
+    end
+    
     Forum.find(@forum_thread.forum_id).touch()
     respond_to do |format|
       if @forum_thread.save

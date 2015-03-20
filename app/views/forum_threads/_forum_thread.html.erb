@@ -1,29 +1,5 @@
 <div class="forum_thread">
-  <div class="forum_thread_header">
-    <header>
-      <%= link_to get_author(forum_thread.author_id).name, user_path(forum_thread.author_id) %>
-      <%= "(" %>
-      <%= get_author(forum_thread.author_id).get_post_count %>
-      <%= " posts)" %>
-      <br>
-
-      <div class="header_title"><%= forum_thread.forum_thread_title %></div>
-      <div align="right" class="header_created_at"><%= forum_thread.created_at.strftime("%H:%M -- %d %b. %Y") %></div>
-    </header>
-  </div>
-  <div class="forum_thread_content">
-    <%= gravatar_for get_author(forum_thread.author_id), :size => 40 %>
-    <%= markdown(forum_thread.forum_thread_content) %>
-  </div>
-  <div class="forum_thread_footer">
-    <div class="actions">
-      <% if signed_in? %>
-          <%= link_to "Reply", new_forum_thread_path(:parent_id => forum_thread, :forum_id => forum_thread.forum_id) %>
-          <% if current_user.id == forum_thread.author_id %>
-              | <%= link_to "Edit", edit_forum_thread_path(forum_thread.id) %> |
-              <%= link_to "Destroy", forum_thread, :confirm => "Are you sure?", :method => :delete %>
-          <% end %>
-      <% end %>
-    </div>
-  </div>
+	<%= render "shared/forum_thread_header", forum_thread: forum_thread %>
+	<%= render "shared/forum_thread_content", forum_thread: forum_thread %>
+	<%= render "shared/forum_thread_footer", forum_thread: forum_thread %>
 </div>

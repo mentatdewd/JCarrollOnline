@@ -271,6 +271,7 @@ input, textarea, select, .uneditable-input {
   }
 }
 
+
 .userList {
   list-style: none;
   margin: 0;
@@ -294,6 +295,17 @@ input, textarea, select, .uneditable-input {
     margin: 5px 5px 5px 5px;
 }
 
+.tree_lines {
+  display: inline;
+}
+
+.post_icon {
+  display: inline;
+}
+
+.thread_shortcut {
+  display: inline;
+}
 /* microposts */
 
 .micropost {
@@ -315,8 +327,25 @@ input, textarea, select, .uneditable-input {
   }
 }
 
+.thread_summary {
+  border: 2px solid;
+  margin: 0px 0px 20px 00px;
+}
+
 .content {
   display: block;
+}
+
+.created_at {
+  align: right;
+}
+
+.reply_to {
+  align: right;
+}
+
+.thread_info {
+  display: inline;
 }
 
 .timestamp {
@@ -390,6 +419,15 @@ th {
 }
 
 .nested_threads .nested_threads .nested_threads .nested_threads {
+  margin-left: 0;
+}
+
+.nested_threads_headers {
+  padding-top: 0px;
+  margin-left: 0px;
+}
+
+.nested_threads_headers .nested_threads_headers .nested_threads_headers .nested_threads_headers {
   margin-left: 0;
 }
 

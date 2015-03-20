@@ -1,0 +1,32 @@
+<div class="forum_thread_summary_header">
+	
+	<% if forum_thread.depth > 2 %>
+	<% (2..forum_thread.depth).each do |i| %>
+		<img src="/assets/rtable-fork.gif"/>
+	<% end %>
+	<% end %>
+	
+	<% if forum_thread.parent != nil %>
+	<% if forum_thread.has_siblings? %>
+	<% if forum_thread.has_children?%>
+	<div class="tree_lines">
+		<img src="/assets/rtable-fork.gif"/>
+	</div>
+	<% else %> <!-- if forum_thread.has_children -->
+	<div class="tree_lines">
+		<img src="/assets/rtable-turn.gif" />
+	</div>
+	<%end%> <!-- if forum_thread.has_children -->
+	<% elsif forum_thread.has_children? %> <!-- if forum_thread.has_siblings -->
+	<div class="tree_lines">
+		<img src="/assets/rtable-turn.gif"/>
+	</div>
+	<% end %> <!-- if forum_thread.has_siblings -->
+	<% end %> <!-- if forum_thread.parent != nil -->
+	<div class="post_icon">
+		<img src= "/assets/reply-new.gif"/>
+	</div>
+	<div class="thread_shortcut">
+		<%= link_to forum_thread.forum_thread_title, url_for("#".concat("post").concat(forum_thread.id.to_s)), :id => "post".concat(forum_thread.id.to_s) %>
+	</div>
+</div>

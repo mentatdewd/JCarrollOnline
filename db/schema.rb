@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120704143339) do
+ActiveRecord::Schema.define(:version => 20150320174615) do
 
   create_table "forum_moderators", :force => true do |t|
     t.integer  "moderator_id"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20120704143339) do
     t.datetime "updated_at",           :null => false
     t.string   "ancestry"
     t.integer  "impressions_count"
+    t.integer  "thread_post_number"
   end
 
   add_index "forum_threads", ["ancestry"], :name => "index_forum_threads_on_ancestry"
