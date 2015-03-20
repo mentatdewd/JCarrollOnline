@@ -23,6 +23,7 @@ gem 'pygmentize'
 gem 'bootstrap-will_paginate'
 gem 'json', '1.7.3'
 gem 'builder', '3.0.4'
+gem 'rails_12factor'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
