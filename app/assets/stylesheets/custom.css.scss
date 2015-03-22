@@ -449,8 +449,40 @@ th {
   padding-left: 5px;
 }
 
+.thread_shortcut {
+  display: inline;
+  font-size: 15px;
+}
+
+.ths_author {
+  display: inline;
+  margin: 0px 20px;
+}
+
+.ths_time {
+  display: inline;
+  margin: 0px 10px;
+}
+
+.ths_postnumber {
+  display: inline;
+  margin: 0px 10px;
+}
+
+.ths_stats {
+  display: inline;
+  float: right;
+}
+
 .forum_thread {
   border: 1px solid;
+}
+
+.forum_thread_summary_header {
+  border-style: solid;
+  border-width: 1px;
+  border-bottom-width: 0px;
+  border-color: #eeeeee;
 }
 
 .forum_thread_content {

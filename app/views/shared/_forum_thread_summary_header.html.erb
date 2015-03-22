@@ -1,11 +1,11 @@
 <div class="forum_thread_summary_header">
-	
+
 	<% if forum_thread.depth > 2 %>
 	<% (2..forum_thread.depth).each do |i| %>
-		<img src="/assets/rtable-fork.gif"/>
+	<img src="/assets/rtable-fork.gif"/>
 	<% end %>
 	<% end %>
-	
+
 	<% if forum_thread.parent != nil %>
 	<% if forum_thread.has_siblings? %>
 	<% if forum_thread.has_children?%>
@@ -26,7 +26,22 @@
 	<div class="post_icon">
 		<img src= "/assets/reply-new.gif"/>
 	</div>
-	<div class="thread_shortcut">
-		<%= link_to forum_thread.forum_thread_title, url_for("#".concat("post").concat(forum_thread.id.to_s)), :id => "post".concat(forum_thread.id.to_s) %>
+	<div clas="thread_summary_entry" style="display:inline">
+		<div class="thread_shortcut">
+			<%= link_to forum_thread.forum_thread_title, url_for("#".concat("post").concat(forum_thread.id.to_s)), :id => "post".concat(forum_thread.id.to_s) %>
+		</div>
+		<div class="ths_stats">
+			<div class="ths_author">
+				<%= link_to get_author(forum_thread.author_id).name, user_path(forum_thread.author_id) %>
+			</div>
+			<div class="ths_time">
+				<%= forum_thread.created_at.strftime("%H:%M -- %d %b. %Y") %>
+			</div>
+			<div class="ths_postnumber">
+				<% if forum_thread.thread_post_number != nil %>
+				<%= forum_thread.thread_post_number.to_s %>
+				<% end %>
+			</div>
+		</div>
 	</div>
 </div>

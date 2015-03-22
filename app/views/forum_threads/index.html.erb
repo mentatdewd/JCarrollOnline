@@ -1,11 +1,18 @@
 <h1><%= get_forum_title(@forum_thread) %></h1>
 <h2><%= @forum_thread.forum_thread_title %></h2>
 
-<div class="thread_summary">
-<%= nested_thread_headers @forum_threads.arrange(:order => :created_at) %>
+<div class="original_post">
+	<%= render "forum_thread", forum_thread: @forum_thread %>
+	</div>
+	
+<div class="thread_summary_container">
+<%= nested_thread_headers @forum_thread_summaries.arrange(:order => :created_at) %>
 </div>
 
+<div class="thread_post_container">
+	<% @forum_threads %>
 <%= nested_threads @forum_threads.arrange(:order => :created_at) %>
+</div>
 
 <% if signed_in? %>
 <%= link_to "Post", new_forum_thread_path(:parent_id => @forum_thread, :forum_id => @forum_thread.forum_id), class: "btn btn-large btn-primary" %>

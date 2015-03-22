@@ -10,7 +10,8 @@ class ForumThreadsController < ApplicationController
   def index
     puts 'In forum_threads_controller -- index'
     @forum_thread = ForumThread.find(params[:id])
-    @forum_threads = @forum_thread.subtree
+    @forum_thread_summaries = @forum_thread.subtree
+    @forum_threads = @forum_thread.descendants
 
     add_breadcrumb @forum_thread.forum_thread_title, forum_threads_path
 
