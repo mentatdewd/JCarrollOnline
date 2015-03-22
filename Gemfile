@@ -16,6 +16,7 @@ gem 'ruby-prof'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 gem 'gmail'
 gem 'redcarpet', '1.17.2'
 gem 'albino'
@@ -24,6 +25,7 @@ gem 'bootstrap-will_paginate'
 gem 'json', '1.7.3'
 gem 'builder', '3.0.4'
 gem 'rails_12factor'
+gem 'sass', '3.2.19'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -38,7 +40,7 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes

@@ -211,7 +211,7 @@ GEM
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
     ruby-prof (0.15.6)
-    sass (3.4.13)
+    sass (3.2.19)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -250,6 +250,7 @@ DEPENDENCIES
   albino
   ancestry
   annotate (~> 2.4.1.beta)
+  autoprefixer-rails
   bcrypt-ruby (~> 3.0.0)
   bootstrap-sass
   bootstrap-will_paginate
@@ -282,7 +283,8 @@ DEPENDENCIES
   redcarpet (= 1.17.2)
   rspec-rails
   ruby-prof
-  sass-rails (~> 3.2.3)
+  sass (= 3.2.19)
+  sass-rails
   spork
   spring
   table_for_collection

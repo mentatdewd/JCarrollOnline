@@ -1,4 +1,5 @@
 /* mixins, variables, etc. */
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 $grayMediumLight: #eaeaea;
@@ -9,7 +10,7 @@ $blue: #eaeaea;
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 /* universal */
@@ -17,7 +18,7 @@ $blue: #eaeaea;
 html {
   overflow-y: scroll;
 }
-
+ 
 section {
   overflow: auto;
 }
@@ -192,6 +193,10 @@ footer {
 /* sidebar */
 
 aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
   section {
     padding: 10px 0;
     border-top: 1px solid $grayLighter;
@@ -352,13 +357,6 @@ input, textarea, select, .uneditable-input {
   color: $grayLight;
   float: left;
   margin: 0px 20px 0px 0px;
-}
-
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
-  }
 }
 
 .stats {
