@@ -66,18 +66,18 @@ JCarrollOnline::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   require 'gmail'
-  config.action_mailer.default_url_options = { :host => "acyenixp.herokuapp.com" }
-
-  # Include your app's configuration here:
-  config.action_mailer.smtp_settings = {
-      :address => "smtp.gmail.com",
-      :port => "587",
-      :domain => "JCarrollOnline.com", #Example: blog.local
-      :authentication => :plain,
-      :user_name => "jcarrollonline",
-      :password => "mstjnbxzvnqlspyx"
-  }
-  end
+# Disable delivery errors, bad email addresses will be ignored
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.default_url_options = { :host => 'acyenixp.heroku.com' }
+ActionMailer::Base.smtp_settings = {
+  :address    => "smtp.sendgrid.net",
+  :port       => 25,
+  :user_name  => ENV['SENDGRID_USERNAME'],
+  :password   => ENV['SENDGRID_PASSWORD'],
+  :domain     => ENV['SENDGRID_DOMAIN'],
+  :authentication  => :plain
+}  end
   #ActionMailer::Base.smtp_settings = {
   #    :address              => "smtp.gmail.com",
   #    :port                 => 587,
